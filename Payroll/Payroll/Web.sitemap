@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode roles="*">
+    <siteMapNode url="~\Company" title="Company"  description="Company">
+      <siteMapNode url="~\Company\Department.aspx" title="Department"  description="create a Department"/>
+      <siteMapNode url="~\Company\Designation.aspx" title="Designation"  description="create a Designation"/>
+      <siteMapNode url="~\Company\DepartmentType.aspx" title="DepartmentType"  description="Create a DepartmentType" />
+      <siteMapNode url="~\Company\DesignationType.aspx" title="DesignationType"  description="Create a DesignationType" />
+      <siteMapNode url="~\Company\Grade.aspx" title="Grade"  description="Create a Grade" />
+    </siteMapNode>
+    
+    <siteMapNode url="~\Employee" title="Employee"  description="Employee" > 
+      <siteMapNode url="~\Employee\Religion.aspx" title="Religion"  description="create a Religion"/>
+      <siteMapNode url="~\Employee\Caste.aspx" title="Caste"  description="Create a Caste" />
+    </siteMapNode>
+
+    <siteMapNode url="~\Institution" title="Institution"  description="Institution">
+      <siteMapNode url="~\Institution\Institution.aspx" title="Institution"  description="create a Institution"/>
+      <siteMapNode url="~\Institution\InstitutionType.aspx" title="InstitutionType"  description="Create a InstitutionType" />
+    </siteMapNode>
+    
+    <siteMapNode url="~\Contact" title="Contact"  description="Contact">
+      <siteMapNode url="~\Contact\Country.aspx" title="Country"  description="create a Country"/>
+      <siteMapNode url="~\Contact\State.aspx" title="State"  description="Create a State" />
+      <siteMapNode url="~\Contact\District.aspx" title="District"  description="Create a District" />
+    </siteMapNode>
+    
+   
+    <siteMapNode url="~\Admin" title="Admin"  description="Admin">
+      <siteMapNode url="~\Account\ChangePassword.aspx" title="Change Password"  description="Change Password" />
+      <siteMapNode url="~\Account\Register.aspx" title="Create User"  description="Create User" />
+      <siteMapNode url="~\Account\CreateRoles.aspx" title="Create Roles"  description="Create Roles" />
+      <siteMapNode url="~\Account\AssignRoles.aspx" title="Assign Roles"  description="Assign Roles" />
+    </siteMapNode>
+    
+    </siteMapNode>
+</siteMap>

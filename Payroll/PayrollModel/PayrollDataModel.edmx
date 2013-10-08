@@ -1,0 +1,2115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Payroll_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="Payroll_ModelStoreContainer">
+          <EntitySet Name="Caste" EntityType="Payroll_Model.Store.Caste" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Company" EntityType="Payroll_Model.Store.Company" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanyBranch" EntityType="Payroll_Model.Store.CompanyBranch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CompanyType" EntityType="Payroll_Model.Store.CompanyType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Contact" EntityType="Payroll_Model.Store.Contact" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="Payroll_Model.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Department" EntityType="Payroll_Model.Store.Department" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DepartmentType" EntityType="Payroll_Model.Store.DepartmentType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Designation" EntityType="Payroll_Model.Store.Designation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DesignationType" EntityType="Payroll_Model.Store.DesignationType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="District" EntityType="Payroll_Model.Store.District" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employee" EntityType="Payroll_Model.Store.Employee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeType" EntityType="Payroll_Model.Store.EmployeeType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmpNominee" EntityType="Payroll_Model.Store.EmpNominee" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Grade" EntityType="Payroll_Model.Store.Grade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Institution" EntityType="Payroll_Model.Store.Institution" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InstitutionBranch" EntityType="Payroll_Model.Store.InstitutionBranch" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InstitutionType" EntityType="Payroll_Model.Store.InstitutionType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PayGroup" EntityType="Payroll_Model.Store.PayGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PayRevision" EntityType="Payroll_Model.Store.PayRevision" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PayScale" EntityType="Payroll_Model.Store.PayScale" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PayStage" EntityType="Payroll_Model.Store.PayStage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PromotionType" EntityType="Payroll_Model.Store.PromotionType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Religion" EntityType="Payroll_Model.Store.Religion" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="State" EntityType="Payroll_Model.Store.State" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Status" EntityType="Payroll_Model.Store.Status" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="Payroll_Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Caste_Religion" Association="Payroll_Model.Store.FK_Caste_Religion">
+            <End Role="Religion" EntitySet="Religion" />
+            <End Role="Caste" EntitySet="Caste" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_CompanyType" Association="Payroll_Model.Store.FK_Company_CompanyType">
+            <End Role="CompanyType" EntitySet="CompanyType" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Company_Contact" Association="Payroll_Model.Store.FK_Company_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Company" EntitySet="Company" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyBranch_Company" Association="Payroll_Model.Store.FK_CompanyBranch_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="CompanyBranch" EntitySet="CompanyBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CompanyBranch_Contact" Association="Payroll_Model.Store.FK_CompanyBranch_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="CompanyBranch" EntitySet="CompanyBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_Company" Association="Payroll_Model.Store.FK_Department_Company">
+            <End Role="Company" EntitySet="Company" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_CompanyBranch" Association="Payroll_Model.Store.FK_Department_CompanyBranch">
+            <End Role="CompanyBranch" EntitySet="CompanyBranch" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_DepartmentType" Association="Payroll_Model.Store.FK_Department_DepartmentType">
+            <End Role="DepartmentType" EntitySet="DepartmentType" />
+            <End Role="Department" EntitySet="Department" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Designation_DesignationType" Association="Payroll_Model.Store.FK_Designation_DesignationType">
+            <End Role="DesignationType" EntitySet="DesignationType" />
+            <End Role="Designation" EntitySet="Designation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_District_Country" Association="Payroll_Model.Store.FK_District_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="District" EntitySet="District" />
+          </AssociationSet>
+          <AssociationSet Name="FK_District_State" Association="Payroll_Model.Store.FK_District_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="District" EntitySet="District" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Caste" Association="Payroll_Model.Store.FK_Employee_Caste">
+            <End Role="Caste" EntitySet="Caste" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Caste1" Association="Payroll_Model.Store.FK_Employee_Caste1">
+            <End Role="Caste" EntitySet="Caste" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Contact" Association="Payroll_Model.Store.FK_Employee_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_EmployeeType" Association="Payroll_Model.Store.FK_Employee_EmployeeType">
+            <End Role="EmployeeType" EntitySet="EmployeeType" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Religion" Association="Payroll_Model.Store.FK_Employee_Religion">
+            <End Role="Religion" EntitySet="Religion" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Religion1" Association="Payroll_Model.Store.FK_Employee_Religion1">
+            <End Role="Religion" EntitySet="Religion" />
+            <End Role="Employee" EntitySet="Employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpNominee_Employee" Association="Payroll_Model.Store.FK_EmpNominee_Employee">
+            <End Role="Employee" EntitySet="Employee" />
+            <End Role="EmpNominee" EntitySet="EmpNominee" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Institution_InstitutionType" Association="Payroll_Model.Store.FK_Institution_InstitutionType">
+            <End Role="InstitutionType" EntitySet="InstitutionType" />
+            <End Role="Institution" EntitySet="Institution" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InstitutionBranch_Contact" Association="Payroll_Model.Store.FK_InstitutionBranch_Contact">
+            <End Role="Contact" EntitySet="Contact" />
+            <End Role="InstitutionBranch" EntitySet="InstitutionBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InstitutionBranch_Institution" Association="Payroll_Model.Store.FK_InstitutionBranch_Institution">
+            <End Role="Institution" EntitySet="Institution" />
+            <End Role="InstitutionBranch" EntitySet="InstitutionBranch" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayGroup_PayRevision" Association="Payroll_Model.Store.FK_PayGroup_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevision" />
+            <End Role="PayGroup" EntitySet="PayGroup" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayScale_PayGroup" Association="Payroll_Model.Store.FK_PayScale_PayGroup">
+            <End Role="PayGroup" EntitySet="PayGroup" />
+            <End Role="PayScale" EntitySet="PayScale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayScale_PayRevision" Association="Payroll_Model.Store.FK_PayScale_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevision" />
+            <End Role="PayScale" EntitySet="PayScale" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayGroup" Association="Payroll_Model.Store.FK_PayStage_PayGroup">
+            <End Role="PayGroup" EntitySet="PayGroup" />
+            <End Role="PayStage" EntitySet="PayStage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayRevision" Association="Payroll_Model.Store.FK_PayStage_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevision" />
+            <End Role="PayStage" EntitySet="PayStage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayScale" Association="Payroll_Model.Store.FK_PayStage_PayScale">
+            <End Role="PayScale" EntitySet="PayScale" />
+            <End Role="PayStage" EntitySet="PayStage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="Payroll_Model.Store.FK_State_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Caste">
+          <Key>
+            <PropertyRef Name="CasteId" />
+          </Key>
+          <Property Name="CasteId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CasteName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReligionId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Name="CompanyId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyTypeId" Type="int" Nullable="false" />
+          <Property Name="CompanyCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CompanyName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContactId" Type="int" />
+        </EntityType>
+        <EntityType Name="CompanyBranch">
+          <Key>
+            <PropertyRef Name="CompanyBranchId" />
+          </Key>
+          <Property Name="CompanyBranchId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="CompanyBranchName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContactId" Type="int" />
+        </EntityType>
+        <EntityType Name="CompanyType">
+          <Key>
+            <PropertyRef Name="CompanyTypeId" />
+          </Key>
+          <Property Name="CompanyTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyTypeName" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Name="ContactId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Address1" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Address2" Type="varchar" MaxLength="100" />
+          <Property Name="Address3" Type="varchar" MaxLength="100" />
+          <Property Name="Pin" Type="varchar" MaxLength="10" />
+          <Property Name="District" Type="int" />
+          <Property Name="State" Type="int" />
+          <Property Name="Country" Type="int" />
+          <Property Name="Phone" Type="varchar" MaxLength="15" />
+          <Property Name="Mobile" Type="varchar" MaxLength="15" />
+          <Property Name="CAddress1" Type="varchar" MaxLength="100" />
+          <Property Name="CAddress2" Type="varchar" MaxLength="100" />
+          <Property Name="CAddress3" Type="varchar" MaxLength="100" />
+          <Property Name="CPin" Type="varchar" MaxLength="10" />
+          <Property Name="CDistrict" Type="int" />
+          <Property Name="CState" Type="int" />
+          <Property Name="CCountry" Type="int" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyId" Type="int" Nullable="false" />
+          <Property Name="CompanyBranchId" Type="int" Nullable="false" />
+          <Property Name="DepartmentName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PhoneNo" Type="varchar" MaxLength="50" />
+          <Property Name="DepartmentTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DepartmentType">
+          <Key>
+            <PropertyRef Name="DepartmentTypeId" />
+          </Key>
+          <Property Name="DepartmentTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentTypeName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesignationId" />
+          </Key>
+          <Property Name="DesignationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DesignationTypeId" Type="int" Nullable="false" />
+          <Property Name="DesignationCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DesignationName" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="DesignationType">
+          <Key>
+            <PropertyRef Name="DesignationTypeId" />
+          </Key>
+          <Property Name="DesignationTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DesignationTypeName" Type="varchar" Nullable="false" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="District">
+          <Key>
+            <PropertyRef Name="DistrictId" />
+          </Key>
+          <Property Name="DistrictId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DistrictName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="StateId" Type="int" Nullable="false" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Name="EmpId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeTypeId" Type="int" Nullable="false" />
+          <Property Name="EmpCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="EmpName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="DOR" Type="date" Nullable="false" />
+          <Property Name="Gender" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Nationality" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ReligionId" Type="int" Nullable="false" />
+          <Property Name="CasteId" Type="int" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="PanNo" Type="bigint" />
+          <Property Name="BloodGroup" Type="varchar" MaxLength="20" />
+          <Property Name="ExServiceMan" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="PhysicallyHandicapped" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="NatureOfHandicap" Type="varchar" MaxLength="100" />
+          <Property Name="FatherName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MotherName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SpouseName" Type="varchar" MaxLength="100" />
+          <Property Name="SpouseReligionId" Type="int" />
+          <Property Name="SpouseCasteId" Type="int" />
+          <Property Name="SpouseEmployed" Type="varchar" MaxLength="20" />
+          <Property Name="SpouseEmployment" Type="varchar" MaxLength="100" />
+          <Property Name="ContactId" Type="int" />
+        </EntityType>
+        <EntityType Name="EmployeeType">
+          <Key>
+            <PropertyRef Name="EmployeeTypeId" />
+          </Key>
+          <Property Name="EmployeeTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="EmpNominee">
+          <Key>
+            <PropertyRef Name="EmpNomineeId" />
+          </Key>
+          <Property Name="EmpNomineeId" Type="int" Nullable="false" />
+          <Property Name="EmpId" Type="bigint" Nullable="false" />
+          <Property Name="NomineeName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DOB" Type="date" Nullable="false" />
+          <Property Name="ContactId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="GradeId" />
+          </Key>
+          <Property Name="GradeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GradeCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="GradeName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="GradePay" Type="money" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Institution">
+          <Key>
+            <PropertyRef Name="InstitutionId" />
+          </Key>
+          <Property Name="InstitutionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InstitutionName" Type="varchar" Nullable="false" MaxLength="300" />
+          <Property Name="InstitutionTypeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="InstitutionBranch">
+          <Key>
+            <PropertyRef Name="InstitutionBranchId" />
+          </Key>
+          <Property Name="InstitutionBranchId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionId" Type="int" Nullable="false" />
+          <Property Name="InstitutionBranchCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="InstitutionBranchName" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="ContactId" Type="int" />
+        </EntityType>
+        <EntityType Name="InstitutionType">
+          <Key>
+            <PropertyRef Name="InstitutionTypeId" />
+          </Key>
+          <Property Name="InstitutionTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionTypeName" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PayGroup">
+          <Key>
+            <PropertyRef Name="PayGroupId" />
+          </Key>
+          <Property Name="PayGroupId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PayRevisionId" Type="int" Nullable="false" />
+          <Property Name="PayGroupNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PayGroupName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="NoOfScales" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="Remarks" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PayRevision">
+          <Key>
+            <PropertyRef Name="PayRevisionId" />
+          </Key>
+          <Property Name="PayRevisionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PayRevisionName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RevisionYear" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="RevisionDate" Type="date" />
+          <Property Name="SanctionDate" Type="date" />
+          <Property Name="AplicableFrom" Type="date" />
+          <Property Name="CancelledDate" Type="date" />
+        </EntityType>
+        <EntityType Name="PayScale">
+          <Key>
+            <PropertyRef Name="PayScaleId" />
+          </Key>
+          <Property Name="PayScaleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PayRevisionId" Type="int" Nullable="false" />
+          <Property Name="PayGroupId" Type="int" Nullable="false" />
+          <Property Name="PayScaleName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="PayScaleDefinition" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="PayScaleMin" Type="money" Nullable="false" />
+          <Property Name="PayScaleMax" Type="money" Nullable="false" />
+          <Property Name="IncrementPeriod" Type="int" Nullable="false" />
+          <Property Name="Remarks" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="PayStage">
+          <Key>
+            <PropertyRef Name="PayStageId" />
+          </Key>
+          <Property Name="PayStageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PayRevisionId" Type="int" Nullable="false" />
+          <Property Name="PayGroupId" Type="int" Nullable="false" />
+          <Property Name="PayScaleId" Type="int" Nullable="false" />
+          <Property Name="StageNo" Type="int" Nullable="false" />
+          <Property Name="StageName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="StagePay" Type="money" Nullable="false" />
+          <Property Name="StageIncrement" Type="money" Nullable="false" />
+          <Property Name="Remarks" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="PromotionType">
+          <Key>
+            <PropertyRef Name="PromotionTypeId" />
+          </Key>
+          <Property Name="PromotionTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PromotionTypeName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Religion">
+          <Key>
+            <PropertyRef Name="ReligionId" />
+          </Key>
+          <Property Name="ReligionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ReligionName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateId" />
+          </Key>
+          <Property Name="StateId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StatusCode" Type="int" Nullable="false" />
+          <Property Name="StatusName" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Caste_Religion">
+          <End Role="Religion" Type="Payroll_Model.Store.Religion" Multiplicity="1" />
+          <End Role="Caste" Type="Payroll_Model.Store.Caste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Caste">
+              <PropertyRef Name="ReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_CompanyType">
+          <End Role="CompanyType" Type="Payroll_Model.Store.CompanyType" Multiplicity="1" />
+          <End Role="Company" Type="Payroll_Model.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyType">
+              <PropertyRef Name="CompanyTypeId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CompanyTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Company_Contact">
+          <End Role="Contact" Type="Payroll_Model.Store.Contact" Multiplicity="0..1" />
+          <End Role="Company" Type="Payroll_Model.Store.Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyBranch_Company">
+          <End Role="Company" Type="Payroll_Model.Store.Company" Multiplicity="1" />
+          <End Role="CompanyBranch" Type="Payroll_Model.Store.CompanyBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="CompanyBranch">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CompanyBranch_Contact">
+          <End Role="Contact" Type="Payroll_Model.Store.Contact" Multiplicity="0..1" />
+          <End Role="CompanyBranch" Type="Payroll_Model.Store.CompanyBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="CompanyBranch">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_Company">
+          <End Role="Company" Type="Payroll_Model.Store.Company" Multiplicity="1" />
+          <End Role="Department" Type="Payroll_Model.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_CompanyBranch">
+          <End Role="CompanyBranch" Type="Payroll_Model.Store.CompanyBranch" Multiplicity="1" />
+          <End Role="Department" Type="Payroll_Model.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyBranch">
+              <PropertyRef Name="CompanyBranchId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CompanyBranchId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_DepartmentType">
+          <End Role="DepartmentType" Type="Payroll_Model.Store.DepartmentType" Multiplicity="1" />
+          <End Role="Department" Type="Payroll_Model.Store.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentType">
+              <PropertyRef Name="DepartmentTypeId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="DepartmentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Designation_DesignationType">
+          <End Role="DesignationType" Type="Payroll_Model.Store.DesignationType" Multiplicity="1" />
+          <End Role="Designation" Type="Payroll_Model.Store.Designation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DesignationType">
+              <PropertyRef Name="DesignationTypeId" />
+            </Principal>
+            <Dependent Role="Designation">
+              <PropertyRef Name="DesignationTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_District_Country">
+          <End Role="Country" Type="Payroll_Model.Store.Country" Multiplicity="1" />
+          <End Role="District" Type="Payroll_Model.Store.District" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="District">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_District_State">
+          <End Role="State" Type="Payroll_Model.Store.State" Multiplicity="1" />
+          <End Role="District" Type="Payroll_Model.Store.District" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="District">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Caste">
+          <End Role="Caste" Type="Payroll_Model.Store.Caste" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caste">
+              <PropertyRef Name="CasteId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="CasteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Caste1">
+          <End Role="Caste" Type="Payroll_Model.Store.Caste" Multiplicity="0..1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caste">
+              <PropertyRef Name="CasteId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="SpouseCasteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Contact">
+          <End Role="Contact" Type="Payroll_Model.Store.Contact" Multiplicity="0..1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_EmployeeType">
+          <End Role="EmployeeType" Type="Payroll_Model.Store.EmployeeType" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeType">
+              <PropertyRef Name="EmployeeTypeId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="EmployeeTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Religion">
+          <End Role="Religion" Type="Payroll_Model.Store.Religion" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="ReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Religion1">
+          <End Role="Religion" Type="Payroll_Model.Store.Religion" Multiplicity="0..1" />
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="SpouseReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpNominee_Employee">
+          <End Role="Employee" Type="Payroll_Model.Store.Employee" Multiplicity="1" />
+          <End Role="EmpNominee" Type="Payroll_Model.Store.EmpNominee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmpId" />
+            </Principal>
+            <Dependent Role="EmpNominee">
+              <PropertyRef Name="EmpId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Institution_InstitutionType">
+          <End Role="InstitutionType" Type="Payroll_Model.Store.InstitutionType" Multiplicity="1" />
+          <End Role="Institution" Type="Payroll_Model.Store.Institution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InstitutionType">
+              <PropertyRef Name="InstitutionTypeId" />
+            </Principal>
+            <Dependent Role="Institution">
+              <PropertyRef Name="InstitutionTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InstitutionBranch_Contact">
+          <End Role="Contact" Type="Payroll_Model.Store.Contact" Multiplicity="0..1" />
+          <End Role="InstitutionBranch" Type="Payroll_Model.Store.InstitutionBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="InstitutionBranch">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InstitutionBranch_Institution">
+          <End Role="Institution" Type="Payroll_Model.Store.Institution" Multiplicity="1" />
+          <End Role="InstitutionBranch" Type="Payroll_Model.Store.InstitutionBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Institution">
+              <PropertyRef Name="InstitutionId" />
+            </Principal>
+            <Dependent Role="InstitutionBranch">
+              <PropertyRef Name="InstitutionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayGroup_PayRevision">
+          <End Role="PayRevision" Type="Payroll_Model.Store.PayRevision" Multiplicity="1" />
+          <End Role="PayGroup" Type="Payroll_Model.Store.PayGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayGroup">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayScale_PayGroup">
+          <End Role="PayGroup" Type="Payroll_Model.Store.PayGroup" Multiplicity="1" />
+          <End Role="PayScale" Type="Payroll_Model.Store.PayScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayGroup">
+              <PropertyRef Name="PayGroupId" />
+            </Principal>
+            <Dependent Role="PayScale">
+              <PropertyRef Name="PayGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayScale_PayRevision">
+          <End Role="PayRevision" Type="Payroll_Model.Store.PayRevision" Multiplicity="1" />
+          <End Role="PayScale" Type="Payroll_Model.Store.PayScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayScale">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayGroup">
+          <End Role="PayGroup" Type="Payroll_Model.Store.PayGroup" Multiplicity="1" />
+          <End Role="PayStage" Type="Payroll_Model.Store.PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayGroup">
+              <PropertyRef Name="PayGroupId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayRevision">
+          <End Role="PayRevision" Type="Payroll_Model.Store.PayRevision" Multiplicity="1" />
+          <End Role="PayStage" Type="Payroll_Model.Store.PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayScale">
+          <End Role="PayScale" Type="Payroll_Model.Store.PayScale" Multiplicity="1" />
+          <End Role="PayStage" Type="Payroll_Model.Store.PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayScale">
+              <PropertyRef Name="PayScaleId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayScaleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="Payroll_Model.Store.Country" Multiplicity="1" />
+          <End Role="State" Type="Payroll_Model.Store.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Payroll_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Payroll_Context" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Castes" EntityType="Payroll_Model.Caste" />
+          <EntitySet Name="Countries" EntityType="Payroll_Model.Country" />
+          <EntitySet Name="Departments" EntityType="Payroll_Model.Department" />
+          <EntitySet Name="DepartmentTypes" EntityType="Payroll_Model.DepartmentType" />
+          <EntitySet Name="Designations" EntityType="Payroll_Model.Designation" />
+          <EntitySet Name="DesignationTypes" EntityType="Payroll_Model.DesignationType" />
+          <EntitySet Name="Districts" EntityType="Payroll_Model.District" />
+          <EntitySet Name="Employees" EntityType="Payroll_Model.Employee" />
+          <EntitySet Name="EmployeeTypes" EntityType="Payroll_Model.EmployeeType" />
+          <EntitySet Name="EmpNominees" EntityType="Payroll_Model.EmpNominee" />
+          <EntitySet Name="Grades" EntityType="Payroll_Model.Grade" />
+          <EntitySet Name="Institutions" EntityType="Payroll_Model.Institution" />
+          <EntitySet Name="InstitutionBranches" EntityType="Payroll_Model.InstitutionBranch" />
+          <EntitySet Name="InstitutionTypes" EntityType="Payroll_Model.InstitutionType" />
+          <EntitySet Name="PromotionTypes" EntityType="Payroll_Model.PromotionType" />
+          <EntitySet Name="Religions" EntityType="Payroll_Model.Religion" />
+          <EntitySet Name="States" EntityType="Payroll_Model.State" />
+          <EntitySet Name="Status" EntityType="Payroll_Model.Status" />
+          <AssociationSet Name="FK_Caste_Religion" Association="Payroll_Model.FK_Caste_Religion">
+            <End Role="Religion" EntitySet="Religions" />
+            <End Role="Caste" EntitySet="Castes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Caste" Association="Payroll_Model.FK_Employee_Caste">
+            <End Role="Caste" EntitySet="Castes" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Caste1" Association="Payroll_Model.FK_Employee_Caste1">
+            <End Role="Caste" EntitySet="Castes" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_District_Country" Association="Payroll_Model.FK_District_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="District" EntitySet="Districts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country" Association="Payroll_Model.FK_State_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="State" EntitySet="States" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_DepartmentType" Association="Payroll_Model.FK_Department_DepartmentType">
+            <End Role="DepartmentType" EntitySet="DepartmentTypes" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Designation_DesignationType" Association="Payroll_Model.FK_Designation_DesignationType">
+            <End Role="DesignationType" EntitySet="DesignationTypes" />
+            <End Role="Designation" EntitySet="Designations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_District_State" Association="Payroll_Model.FK_District_State">
+            <End Role="State" EntitySet="States" />
+            <End Role="District" EntitySet="Districts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_EmployeeType" Association="Payroll_Model.FK_Employee_EmployeeType">
+            <End Role="EmployeeType" EntitySet="EmployeeTypes" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Religion" Association="Payroll_Model.FK_Employee_Religion">
+            <End Role="Religion" EntitySet="Religions" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Religion1" Association="Payroll_Model.FK_Employee_Religion1">
+            <End Role="Religion" EntitySet="Religions" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EmpNominee_Employee" Association="Payroll_Model.FK_EmpNominee_Employee">
+            <End Role="Employee" EntitySet="Employees" />
+            <End Role="EmpNominee" EntitySet="EmpNominees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Institution_InstitutionType" Association="Payroll_Model.FK_Institution_InstitutionType">
+            <End Role="InstitutionType" EntitySet="InstitutionTypes" />
+            <End Role="Institution" EntitySet="Institutions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InstitutionBranch_Institution" Association="Payroll_Model.FK_InstitutionBranch_Institution">
+            <End Role="Institution" EntitySet="Institutions" />
+            <End Role="InstitutionBranch" EntitySet="InstitutionBranches" />
+          </AssociationSet>
+          <EntitySet Name="Companies" EntityType="Payroll_Model.Company" />
+          <EntitySet Name="CompanyBranches" EntityType="Payroll_Model.CompanyBranch" />
+          <EntitySet Name="CompanyTypes" EntityType="Payroll_Model.CompanyType" />
+          <EntitySet Name="sysdiagrams" EntityType="Payroll_Model.sysdiagram" />
+          <AssociationSet Name="FK_Department_Company" Association="Payroll_Model.FK_Department_Company">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Organisation_OrganisationType1" Association="Payroll_Model.FK_Organisation_OrganisationType1">
+            <End Role="CompanyType" EntitySet="CompanyTypes" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganisationBranch_Organisation1" Association="Payroll_Model.FK_OrganisationBranch_Organisation1">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="CompanyBranch" EntitySet="CompanyBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Department_CompanyBranch" Association="Payroll_Model.FK_Department_CompanyBranch">
+            <End Role="CompanyBranch" EntitySet="CompanyBranches" />
+            <End Role="Department" EntitySet="Departments" />
+          </AssociationSet>
+          <EntitySet Name="Contacts" EntityType="Payroll_Model.Contact" />
+          <AssociationSet Name="FK_Organisation_Contact" Association="Payroll_Model.FK_Organisation_Contact">
+            <End Role="Contact" EntitySet="Contacts" />
+            <End Role="Company" EntitySet="Companies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrganisationBranch_Contact" Association="Payroll_Model.FK_OrganisationBranch_Contact">
+            <End Role="Contact" EntitySet="Contacts" />
+            <End Role="CompanyBranch" EntitySet="CompanyBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Employee_Contact" Association="Payroll_Model.FK_Employee_Contact">
+            <End Role="Contact" EntitySet="Contacts" />
+            <End Role="Employee" EntitySet="Employees" />
+          </AssociationSet>
+          <AssociationSet Name="FK_InstitutionBranch_Contact" Association="Payroll_Model.FK_InstitutionBranch_Contact">
+            <End Role="Contact" EntitySet="Contacts" />
+            <End Role="InstitutionBranch" EntitySet="InstitutionBranches" />
+          </AssociationSet>
+          <EntitySet Name="PayGroups" EntityType="Payroll_Model.PayGroup" />
+          <EntitySet Name="PayRevisions" EntityType="Payroll_Model.PayRevision" />
+          <EntitySet Name="PayScales" EntityType="Payroll_Model.PayScale" />
+          <EntitySet Name="PayStages" EntityType="Payroll_Model.PayStage" />
+          <AssociationSet Name="FK_PayGroup_PayRevision" Association="Payroll_Model.FK_PayGroup_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevisions" />
+            <End Role="PayGroup" EntitySet="PayGroups" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayScale_PayGroup" Association="Payroll_Model.FK_PayScale_PayGroup">
+            <End Role="PayGroup" EntitySet="PayGroups" />
+            <End Role="PayScale" EntitySet="PayScales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayGroup" Association="Payroll_Model.FK_PayStage_PayGroup">
+            <End Role="PayGroup" EntitySet="PayGroups" />
+            <End Role="PayStage" EntitySet="PayStages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayScale_PayRevision" Association="Payroll_Model.FK_PayScale_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevisions" />
+            <End Role="PayScale" EntitySet="PayScales" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayRevision" Association="Payroll_Model.FK_PayStage_PayRevision">
+            <End Role="PayRevision" EntitySet="PayRevisions" />
+            <End Role="PayStage" EntitySet="PayStages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PayStage_PayScale" Association="Payroll_Model.FK_PayStage_PayScale">
+            <End Role="PayScale" EntitySet="PayScales" />
+            <End Role="PayStage" EntitySet="PayStages" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Caste">
+          <Key>
+            <PropertyRef Name="CasteId" />
+          </Key>
+          <Property Name="CasteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CasteName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReligionId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Religion" Relationship="Payroll_Model.FK_Caste_Religion" FromRole="Caste" ToRole="Religion" />
+          <NavigationProperty Name="Employees" Relationship="Payroll_Model.FK_Employee_Caste" FromRole="Caste" ToRole="Employee" />
+          <NavigationProperty Name="Employees1" Relationship="Payroll_Model.FK_Employee_Caste1" FromRole="Caste" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Districts" Relationship="Payroll_Model.FK_District_Country" FromRole="Country" ToRole="District" />
+          <NavigationProperty Name="States" Relationship="Payroll_Model.FK_State_Country" FromRole="Country" ToRole="State" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DepartmentTypeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DepartmentType" Relationship="Payroll_Model.FK_Department_DepartmentType" FromRole="Department" ToRole="DepartmentType" />
+          <Property Type="Int32" Name="CompanyId" Nullable="false" />
+          <Property Type="Int32" Name="CompanyBranchId" Nullable="false" />
+          <NavigationProperty Name="Company" Relationship="Payroll_Model.FK_Department_Company" FromRole="Department" ToRole="Company" />
+          <NavigationProperty Name="CompanyBranch" Relationship="Payroll_Model.FK_Department_CompanyBranch" FromRole="Department" ToRole="CompanyBranch" />
+        </EntityType>
+        <EntityType Name="DepartmentType">
+          <Key>
+            <PropertyRef Name="DepartmentTypeId" />
+          </Key>
+          <Property Name="DepartmentTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentTypeName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Departments" Relationship="Payroll_Model.FK_Department_DepartmentType" FromRole="DepartmentType" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="Designation">
+          <Key>
+            <PropertyRef Name="DesignationId" />
+          </Key>
+          <Property Name="DesignationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesignationTypeId" Type="Int32" Nullable="false" />
+          <Property Name="DesignationCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DesignationName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="DesignationType" Relationship="Payroll_Model.FK_Designation_DesignationType" FromRole="Designation" ToRole="DesignationType" />
+        </EntityType>
+        <EntityType Name="DesignationType">
+          <Key>
+            <PropertyRef Name="DesignationTypeId" />
+          </Key>
+          <Property Name="DesignationTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DesignationTypeName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Designations" Relationship="Payroll_Model.FK_Designation_DesignationType" FromRole="DesignationType" ToRole="Designation" />
+        </EntityType>
+        <EntityType Name="District">
+          <Key>
+            <PropertyRef Name="DistrictId" />
+          </Key>
+          <Property Name="DistrictId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DistrictName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="StateId" Type="Int32" Nullable="false" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="Payroll_Model.FK_District_Country" FromRole="District" ToRole="Country" />
+          <NavigationProperty Name="State" Relationship="Payroll_Model.FK_District_State" FromRole="District" ToRole="State" />
+        </EntityType>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="EmpId" />
+          </Key>
+          <Property Name="EmpId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeTypeId" Type="Int32" Nullable="false" />
+          <Property Name="EmpCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EmpName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" />
+          <Property Name="DOR" Type="DateTime" Nullable="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Nationality" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ReligionId" Type="Int32" Nullable="false" />
+          <Property Name="CasteId" Type="Int32" Nullable="false" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="PanNo" Type="Int64" />
+          <Property Name="BloodGroup" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ExServiceMan" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PhysicallyHandicapped" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="NatureOfHandicap" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FatherName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MotherName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MaritalStatus" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SpouseName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SpouseReligionId" Type="Int32" />
+          <Property Name="SpouseCasteId" Type="Int32" />
+          <Property Name="SpouseEmployed" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SpouseEmployment" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ContactId" Type="Int32" />
+          <NavigationProperty Name="Caste" Relationship="Payroll_Model.FK_Employee_Caste" FromRole="Employee" ToRole="Caste" />
+          <NavigationProperty Name="Caste1" Relationship="Payroll_Model.FK_Employee_Caste1" FromRole="Employee" ToRole="Caste" />
+          <NavigationProperty Name="EmployeeType" Relationship="Payroll_Model.FK_Employee_EmployeeType" FromRole="Employee" ToRole="EmployeeType" />
+          <NavigationProperty Name="Religion" Relationship="Payroll_Model.FK_Employee_Religion" FromRole="Employee" ToRole="Religion" />
+          <NavigationProperty Name="Religion1" Relationship="Payroll_Model.FK_Employee_Religion1" FromRole="Employee" ToRole="Religion" />
+          <NavigationProperty Name="EmpNominees" Relationship="Payroll_Model.FK_EmpNominee_Employee" FromRole="Employee" ToRole="EmpNominee" />
+          <NavigationProperty Name="Contact" Relationship="Payroll_Model.FK_Employee_Contact" FromRole="Employee" ToRole="Contact" />
+        </EntityType>
+        <EntityType Name="EmployeeType">
+          <Key>
+            <PropertyRef Name="EmployeeTypeId" />
+          </Key>
+          <Property Name="EmployeeTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmployeeTypeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Employees" Relationship="Payroll_Model.FK_Employee_EmployeeType" FromRole="EmployeeType" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="EmpNominee">
+          <Key>
+            <PropertyRef Name="EmpNomineeId" />
+          </Key>
+          <Property Name="EmpNomineeId" Type="Int32" Nullable="false" />
+          <Property Name="EmpId" Type="Int64" Nullable="false" />
+          <Property Name="NomineeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="DOB" Type="DateTime" Nullable="false" />
+          <Property Name="ContactId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Employee" Relationship="Payroll_Model.FK_EmpNominee_Employee" FromRole="EmpNominee" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="Grade">
+          <Key>
+            <PropertyRef Name="GradeId" />
+          </Key>
+          <Property Name="GradeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GradeCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="GradeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Type="Decimal" Name="GradePay" Nullable="false" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="Institution">
+          <Key>
+            <PropertyRef Name="InstitutionId" />
+          </Key>
+          <Property Name="InstitutionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="InstitutionName" Type="String" Nullable="false" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Name="InstitutionTypeId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="InstitutionType" Relationship="Payroll_Model.FK_Institution_InstitutionType" FromRole="Institution" ToRole="InstitutionType" />
+          <NavigationProperty Name="InstitutionBranches" Relationship="Payroll_Model.FK_InstitutionBranch_Institution" FromRole="Institution" ToRole="InstitutionBranch" />
+        </EntityType>
+        <EntityType Name="InstitutionBranch">
+          <Key>
+            <PropertyRef Name="InstitutionBranchId" />
+          </Key>
+          <Property Name="InstitutionBranchId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionId" Type="Int32" Nullable="false" />
+          <Property Name="InstitutionBranchCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="InstitutionBranchName" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ContactId" Type="Int32" />
+          <NavigationProperty Name="Institution" Relationship="Payroll_Model.FK_InstitutionBranch_Institution" FromRole="InstitutionBranch" ToRole="Institution" />
+          <NavigationProperty Name="Contact" Relationship="Payroll_Model.FK_InstitutionBranch_Contact" FromRole="InstitutionBranch" ToRole="Contact" />
+        </EntityType>
+        <EntityType Name="InstitutionType">
+          <Key>
+            <PropertyRef Name="InstitutionTypeId" />
+          </Key>
+          <Property Name="InstitutionTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionTypeName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Institutions" Relationship="Payroll_Model.FK_Institution_InstitutionType" FromRole="InstitutionType" ToRole="Institution" />
+        </EntityType>
+        <EntityType Name="PromotionType">
+          <Key>
+            <PropertyRef Name="PromotionTypeId" />
+          </Key>
+          <Property Name="PromotionTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PromotionTypeName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Religion">
+          <Key>
+            <PropertyRef Name="ReligionId" />
+          </Key>
+          <Property Name="ReligionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReligionName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Castes" Relationship="Payroll_Model.FK_Caste_Religion" FromRole="Religion" ToRole="Caste" />
+          <NavigationProperty Name="Employees" Relationship="Payroll_Model.FK_Employee_Religion" FromRole="Religion" ToRole="Employee" />
+          <NavigationProperty Name="Employees1" Relationship="Payroll_Model.FK_Employee_Religion1" FromRole="Religion" ToRole="Employee" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateId" />
+          </Key>
+          <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="Payroll_Model.FK_State_Country" FromRole="State" ToRole="Country" />
+          <NavigationProperty Name="Districts" Relationship="Payroll_Model.FK_District_State" FromRole="State" ToRole="District" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StatusCode" Type="Int32" Nullable="false" />
+          <Property Name="StatusName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Caste_Religion">
+          <End Role="Religion" Type="Payroll_Model.Religion" Multiplicity="1" />
+          <End Role="Caste" Type="Payroll_Model.Caste" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Caste">
+              <PropertyRef Name="ReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Caste">
+          <End Role="Caste" Type="Payroll_Model.Caste" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caste">
+              <PropertyRef Name="CasteId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="CasteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Caste1">
+          <End Role="Caste" Type="Payroll_Model.Caste" Multiplicity="0..1" />
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Caste">
+              <PropertyRef Name="CasteId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="SpouseCasteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_District_Country">
+          <End Role="Country" Type="Payroll_Model.Country" Multiplicity="1" />
+          <End Role="District" Type="Payroll_Model.District" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="District">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country">
+          <End Role="Country" Type="Payroll_Model.Country" Multiplicity="1" />
+          <End Role="State" Type="Payroll_Model.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_DepartmentType">
+          <End Role="DepartmentType" Type="Payroll_Model.DepartmentType" Multiplicity="1" />
+          <End Role="Department" Type="Payroll_Model.Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentType">
+              <PropertyRef Name="DepartmentTypeId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="DepartmentTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Designation_DesignationType">
+          <End Role="DesignationType" Type="Payroll_Model.DesignationType" Multiplicity="1" />
+          <End Role="Designation" Type="Payroll_Model.Designation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DesignationType">
+              <PropertyRef Name="DesignationTypeId" />
+            </Principal>
+            <Dependent Role="Designation">
+              <PropertyRef Name="DesignationTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_District_State">
+          <End Role="State" Type="Payroll_Model.State" Multiplicity="1" />
+          <End Role="District" Type="Payroll_Model.District" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="District">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_EmployeeType">
+          <End Role="EmployeeType" Type="Payroll_Model.EmployeeType" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EmployeeType">
+              <PropertyRef Name="EmployeeTypeId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="EmployeeTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Religion">
+          <End Role="Religion" Type="Payroll_Model.Religion" Multiplicity="1" />
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="ReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Religion1">
+          <End Role="Religion" Type="Payroll_Model.Religion" Multiplicity="0..1" />
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Religion">
+              <PropertyRef Name="ReligionId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="SpouseReligionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EmpNominee_Employee">
+          <End Role="Employee" Type="Payroll_Model.Employee" Multiplicity="1" />
+          <End Role="EmpNominee" Type="Payroll_Model.EmpNominee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employee">
+              <PropertyRef Name="EmpId" />
+            </Principal>
+            <Dependent Role="EmpNominee">
+              <PropertyRef Name="EmpId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Institution_InstitutionType">
+          <End Role="InstitutionType" Type="Payroll_Model.InstitutionType" Multiplicity="1" />
+          <End Role="Institution" Type="Payroll_Model.Institution" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InstitutionType">
+              <PropertyRef Name="InstitutionTypeId" />
+            </Principal>
+            <Dependent Role="Institution">
+              <PropertyRef Name="InstitutionTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InstitutionBranch_Institution">
+          <End Role="Institution" Type="Payroll_Model.Institution" Multiplicity="1" />
+          <End Role="InstitutionBranch" Type="Payroll_Model.InstitutionBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Institution">
+              <PropertyRef Name="InstitutionId" />
+            </Principal>
+            <Dependent Role="InstitutionBranch">
+              <PropertyRef Name="InstitutionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="CompanyId" />
+          </Key>
+          <Property Type="Int32" Name="CompanyId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CompanyTypeId" Nullable="false" />
+          <Property Type="String" Name="CompanyCode" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CompanyName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ContactId" />
+          <NavigationProperty Name="Departments" Relationship="Payroll_Model.FK_Department_Company" FromRole="Company" ToRole="Department" />
+          <NavigationProperty Name="CompanyType" Relationship="Payroll_Model.FK_Organisation_OrganisationType1" FromRole="Company" ToRole="CompanyType" />
+          <NavigationProperty Name="CompanyBranches" Relationship="Payroll_Model.FK_OrganisationBranch_Organisation1" FromRole="Company" ToRole="CompanyBranch" />
+          <NavigationProperty Name="Contact" Relationship="Payroll_Model.FK_Organisation_Contact" FromRole="Company" ToRole="Contact" />
+        </EntityType>
+        <EntityType Name="CompanyBranch">
+          <Key>
+            <PropertyRef Name="CompanyBranchId" />
+          </Key>
+          <Property Type="Int32" Name="CompanyBranchId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="CompanyId" Nullable="false" />
+          <Property Type="String" Name="CompanyBranchName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ContactId" />
+          <NavigationProperty Name="Company" Relationship="Payroll_Model.FK_OrganisationBranch_Organisation1" FromRole="CompanyBranch" ToRole="Company" />
+          <NavigationProperty Name="Departments" Relationship="Payroll_Model.FK_Department_CompanyBranch" FromRole="CompanyBranch" ToRole="Department" />
+          <NavigationProperty Name="Contact" Relationship="Payroll_Model.FK_OrganisationBranch_Contact" FromRole="CompanyBranch" ToRole="Contact" />
+        </EntityType>
+        <EntityType Name="CompanyType">
+          <Key>
+            <PropertyRef Name="CompanyTypeId" />
+          </Key>
+          <Property Type="Int32" Name="CompanyTypeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CompanyTypeName" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Companies" Relationship="Payroll_Model.FK_Organisation_OrganisationType1" FromRole="CompanyType" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Department_Company">
+          <End Type="Payroll_Model.Company" Role="Company" Multiplicity="1" />
+          <End Type="Payroll_Model.Department" Role="Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Organisation_OrganisationType1">
+          <End Type="Payroll_Model.CompanyType" Role="CompanyType" Multiplicity="1" />
+          <End Type="Payroll_Model.Company" Role="Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyType">
+              <PropertyRef Name="CompanyTypeId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="CompanyTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganisationBranch_Organisation1">
+          <End Type="Payroll_Model.Company" Role="Company" Multiplicity="1" />
+          <End Type="Payroll_Model.CompanyBranch" Role="CompanyBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Company">
+              <PropertyRef Name="CompanyId" />
+            </Principal>
+            <Dependent Role="CompanyBranch">
+              <PropertyRef Name="CompanyId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Department_CompanyBranch">
+          <End Type="Payroll_Model.CompanyBranch" Role="CompanyBranch" Multiplicity="1" />
+          <End Type="Payroll_Model.Department" Role="Department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CompanyBranch">
+              <PropertyRef Name="CompanyBranchId" />
+            </Principal>
+            <Dependent Role="Department">
+              <PropertyRef Name="CompanyBranchId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="ContactId" />
+          </Key>
+          <Property Type="Int32" Name="ContactId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Address1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address3" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Pin" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="District" />
+          <Property Type="Int32" Name="State" />
+          <Property Type="Int32" Name="Country" />
+          <Property Type="String" Name="Phone" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Mobile" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CAddress1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CAddress2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CAddress3" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CPin" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="CDistrict" />
+          <Property Type="Int32" Name="CState" />
+          <Property Type="Int32" Name="CCountry" />
+          <NavigationProperty Name="Companies" Relationship="Payroll_Model.FK_Organisation_Contact" FromRole="Contact" ToRole="Company" />
+          <NavigationProperty Name="CompanyBranches" Relationship="Payroll_Model.FK_OrganisationBranch_Contact" FromRole="Contact" ToRole="CompanyBranch" />
+          <NavigationProperty Name="Employees" Relationship="Payroll_Model.FK_Employee_Contact" FromRole="Contact" ToRole="Employee" />
+          <NavigationProperty Name="InstitutionBranches" Relationship="Payroll_Model.FK_InstitutionBranch_Contact" FromRole="Contact" ToRole="InstitutionBranch" />
+        </EntityType>
+        <Association Name="FK_Organisation_Contact">
+          <End Type="Payroll_Model.Contact" Role="Contact" Multiplicity="0..1" />
+          <End Type="Payroll_Model.Company" Role="Company" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="Company">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrganisationBranch_Contact">
+          <End Type="Payroll_Model.Contact" Role="Contact" Multiplicity="0..1" />
+          <End Type="Payroll_Model.CompanyBranch" Role="CompanyBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="CompanyBranch">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Employee_Contact">
+          <End Type="Payroll_Model.Contact" Role="Contact" Multiplicity="0..1" />
+          <End Type="Payroll_Model.Employee" Role="Employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="Employee">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_InstitutionBranch_Contact">
+          <End Type="Payroll_Model.Contact" Role="Contact" Multiplicity="0..1" />
+          <End Type="Payroll_Model.InstitutionBranch" Role="InstitutionBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Contact">
+              <PropertyRef Name="ContactId" />
+            </Principal>
+            <Dependent Role="InstitutionBranch">
+              <PropertyRef Name="ContactId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PayGroup">
+          <Key>
+            <PropertyRef Name="PayGroupId" />
+          </Key>
+          <Property Type="Int32" Name="PayGroupId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PayRevisionId" Nullable="false" />
+          <Property Type="String" Name="PayGroupNo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayGroupName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NoOfScales" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Remarks" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PayRevision" Relationship="Payroll_Model.FK_PayGroup_PayRevision" FromRole="PayGroup" ToRole="PayRevision" />
+          <NavigationProperty Name="PayScales" Relationship="Payroll_Model.FK_PayScale_PayGroup" FromRole="PayGroup" ToRole="PayScale" />
+          <NavigationProperty Name="PayStages" Relationship="Payroll_Model.FK_PayStage_PayGroup" FromRole="PayGroup" ToRole="PayStage" />
+        </EntityType>
+        <EntityType Name="PayRevision">
+          <Key>
+            <PropertyRef Name="PayRevisionId" />
+          </Key>
+          <Property Type="Int32" Name="PayRevisionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PayRevisionName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RevisionYear" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="RevisionDate" />
+          <Property Type="DateTime" Name="SanctionDate" />
+          <Property Type="DateTime" Name="AplicableFrom" />
+          <Property Type="DateTime" Name="CancelledDate" />
+          <NavigationProperty Name="PayGroups" Relationship="Payroll_Model.FK_PayGroup_PayRevision" FromRole="PayRevision" ToRole="PayGroup" />
+          <NavigationProperty Name="PayScales" Relationship="Payroll_Model.FK_PayScale_PayRevision" FromRole="PayRevision" ToRole="PayScale" />
+          <NavigationProperty Name="PayStages" Relationship="Payroll_Model.FK_PayStage_PayRevision" FromRole="PayRevision" ToRole="PayStage" />
+        </EntityType>
+        <EntityType Name="PayScale">
+          <Key>
+            <PropertyRef Name="PayScaleId" />
+          </Key>
+          <Property Type="Int32" Name="PayScaleId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PayRevisionId" Nullable="false" />
+          <Property Type="Int32" Name="PayGroupId" Nullable="false" />
+          <Property Type="String" Name="PayScaleName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PayScaleDefinition" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="PayScaleMin" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="PayScaleMax" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="IncrementPeriod" Nullable="false" />
+          <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PayGroup" Relationship="Payroll_Model.FK_PayScale_PayGroup" FromRole="PayScale" ToRole="PayGroup" />
+          <NavigationProperty Name="PayRevision" Relationship="Payroll_Model.FK_PayScale_PayRevision" FromRole="PayScale" ToRole="PayRevision" />
+          <NavigationProperty Name="PayStages" Relationship="Payroll_Model.FK_PayStage_PayScale" FromRole="PayScale" ToRole="PayStage" />
+        </EntityType>
+        <EntityType Name="PayStage">
+          <Key>
+            <PropertyRef Name="PayStageId" />
+          </Key>
+          <Property Type="Int32" Name="PayStageId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="PayRevisionId" Nullable="false" />
+          <Property Type="Int32" Name="PayGroupId" Nullable="false" />
+          <Property Type="Int32" Name="PayScaleId" Nullable="false" />
+          <Property Type="Int32" Name="StageNo" Nullable="false" />
+          <Property Type="String" Name="StageName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="StagePay" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="StageIncrement" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="String" Name="Remarks" MaxLength="200" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="PayGroup" Relationship="Payroll_Model.FK_PayStage_PayGroup" FromRole="PayStage" ToRole="PayGroup" />
+          <NavigationProperty Name="PayRevision" Relationship="Payroll_Model.FK_PayStage_PayRevision" FromRole="PayStage" ToRole="PayRevision" />
+          <NavigationProperty Name="PayScale" Relationship="Payroll_Model.FK_PayStage_PayScale" FromRole="PayStage" ToRole="PayScale" />
+        </EntityType>
+        <Association Name="FK_PayGroup_PayRevision">
+          <End Type="Payroll_Model.PayRevision" Role="PayRevision" Multiplicity="1" />
+          <End Type="Payroll_Model.PayGroup" Role="PayGroup" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayGroup">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayScale_PayGroup">
+          <End Type="Payroll_Model.PayGroup" Role="PayGroup" Multiplicity="1" />
+          <End Type="Payroll_Model.PayScale" Role="PayScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayGroup">
+              <PropertyRef Name="PayGroupId" />
+            </Principal>
+            <Dependent Role="PayScale">
+              <PropertyRef Name="PayGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayGroup">
+          <End Type="Payroll_Model.PayGroup" Role="PayGroup" Multiplicity="1" />
+          <End Type="Payroll_Model.PayStage" Role="PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayGroup">
+              <PropertyRef Name="PayGroupId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayGroupId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayScale_PayRevision">
+          <End Type="Payroll_Model.PayRevision" Role="PayRevision" Multiplicity="1" />
+          <End Type="Payroll_Model.PayScale" Role="PayScale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayScale">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayRevision">
+          <End Type="Payroll_Model.PayRevision" Role="PayRevision" Multiplicity="1" />
+          <End Type="Payroll_Model.PayStage" Role="PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayRevision">
+              <PropertyRef Name="PayRevisionId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayRevisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PayStage_PayScale">
+          <End Type="Payroll_Model.PayScale" Role="PayScale" Multiplicity="1" />
+          <End Type="Payroll_Model.PayStage" Role="PayStage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PayScale">
+              <PropertyRef Name="PayScaleId" />
+            </Principal>
+            <Dependent Role="PayStage">
+              <PropertyRef Name="PayScaleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Payroll_ModelStoreContainer" CdmEntityContainer="Payroll_Context">
+          <EntitySetMapping Name="Castes">
+            <EntityTypeMapping TypeName="Payroll_Model.Caste">
+              <MappingFragment StoreEntitySet="Caste">
+                <ScalarProperty Name="CasteId" ColumnName="CasteId" />
+                <ScalarProperty Name="CasteName" ColumnName="CasteName" />
+                <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="Payroll_Model.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Departments">
+            <EntityTypeMapping TypeName="Payroll_Model.Department">
+              <MappingFragment StoreEntitySet="Department">
+                <ScalarProperty Name="CompanyBranchId" ColumnName="CompanyBranchId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="DepartmentTypeId" ColumnName="DepartmentTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DepartmentTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.DepartmentType">
+              <MappingFragment StoreEntitySet="DepartmentType">
+                <ScalarProperty Name="DepartmentTypeId" ColumnName="DepartmentTypeId" />
+                <ScalarProperty Name="DepartmentTypeName" ColumnName="DepartmentTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Designations">
+            <EntityTypeMapping TypeName="Payroll_Model.Designation">
+              <MappingFragment StoreEntitySet="Designation">
+                <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+                <ScalarProperty Name="DesignationTypeId" ColumnName="DesignationTypeId" />
+                <ScalarProperty Name="DesignationCode" ColumnName="DesignationCode" />
+                <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DesignationTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.DesignationType">
+              <MappingFragment StoreEntitySet="DesignationType">
+                <ScalarProperty Name="DesignationTypeId" ColumnName="DesignationTypeId" />
+                <ScalarProperty Name="DesignationTypeName" ColumnName="DesignationTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Districts">
+            <EntityTypeMapping TypeName="Payroll_Model.District">
+              <MappingFragment StoreEntitySet="District">
+                <ScalarProperty Name="DistrictId" ColumnName="DistrictId" />
+                <ScalarProperty Name="DistrictName" ColumnName="DistrictName" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="Payroll_Model.Employee">
+              <MappingFragment StoreEntitySet="Employee">
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
+                <ScalarProperty Name="EmpCode" ColumnName="EmpCode" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="DOR" ColumnName="DOR" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+                <ScalarProperty Name="CasteId" ColumnName="CasteId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="PanNo" ColumnName="PanNo" />
+                <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+                <ScalarProperty Name="ExServiceMan" ColumnName="ExServiceMan" />
+                <ScalarProperty Name="PhysicallyHandicapped" ColumnName="PhysicallyHandicapped" />
+                <ScalarProperty Name="NatureOfHandicap" ColumnName="NatureOfHandicap" />
+                <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="SpouseName" ColumnName="SpouseName" />
+                <ScalarProperty Name="SpouseReligionId" ColumnName="SpouseReligionId" />
+                <ScalarProperty Name="SpouseCasteId" ColumnName="SpouseCasteId" />
+                <ScalarProperty Name="SpouseEmployed" ColumnName="SpouseEmployed" />
+                <ScalarProperty Name="SpouseEmployment" ColumnName="SpouseEmployment" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.EmployeeType">
+              <MappingFragment StoreEntitySet="EmployeeType">
+                <ScalarProperty Name="EmployeeTypeId" ColumnName="EmployeeTypeId" />
+                <ScalarProperty Name="EmployeeTypeName" ColumnName="EmployeeTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpNominees">
+            <EntityTypeMapping TypeName="Payroll_Model.EmpNominee">
+              <MappingFragment StoreEntitySet="EmpNominee">
+                <ScalarProperty Name="EmpNomineeId" ColumnName="EmpNomineeId" />
+                <ScalarProperty Name="EmpId" ColumnName="EmpId" />
+                <ScalarProperty Name="NomineeName" ColumnName="NomineeName" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Grades">
+            <EntityTypeMapping TypeName="Payroll_Model.Grade">
+              <MappingFragment StoreEntitySet="Grade">
+                <ScalarProperty Name="GradePay" ColumnName="GradePay" />
+                <ScalarProperty Name="GradeId" ColumnName="GradeId" />
+                <ScalarProperty Name="GradeCode" ColumnName="GradeCode" />
+                <ScalarProperty Name="GradeName" ColumnName="GradeName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Institutions">
+            <EntityTypeMapping TypeName="Payroll_Model.Institution">
+              <MappingFragment StoreEntitySet="Institution">
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+                <ScalarProperty Name="InstitutionCode" ColumnName="InstitutionCode" />
+                <ScalarProperty Name="InstitutionName" ColumnName="InstitutionName" />
+                <ScalarProperty Name="InstitutionTypeId" ColumnName="InstitutionTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstitutionBranches">
+            <EntityTypeMapping TypeName="Payroll_Model.InstitutionBranch">
+              <MappingFragment StoreEntitySet="InstitutionBranch">
+                <ScalarProperty Name="InstitutionBranchId" ColumnName="InstitutionBranchId" />
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+                <ScalarProperty Name="InstitutionBranchCode" ColumnName="InstitutionBranchCode" />
+                <ScalarProperty Name="InstitutionBranchName" ColumnName="InstitutionBranchName" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstitutionTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.InstitutionType">
+              <MappingFragment StoreEntitySet="InstitutionType">
+                <ScalarProperty Name="InstitutionTypeId" ColumnName="InstitutionTypeId" />
+                <ScalarProperty Name="InstitutionTypeName" ColumnName="InstitutionTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PromotionTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.PromotionType">
+              <MappingFragment StoreEntitySet="PromotionType">
+                <ScalarProperty Name="PromotionTypeId" ColumnName="PromotionTypeId" />
+                <ScalarProperty Name="PromotionTypeName" ColumnName="PromotionTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Religions">
+            <EntityTypeMapping TypeName="Payroll_Model.Religion">
+              <MappingFragment StoreEntitySet="Religion">
+                <ScalarProperty Name="ReligionId" ColumnName="ReligionId" />
+                <ScalarProperty Name="ReligionName" ColumnName="ReligionName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="Payroll_Model.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="Payroll_Model.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="Payroll_Model.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+                <ScalarProperty Name="CompanyCode" ColumnName="CompanyCode" />
+                <ScalarProperty Name="CompanyTypeId" ColumnName="CompanyTypeId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyBranches">
+            <EntityTypeMapping TypeName="Payroll_Model.CompanyBranch">
+              <MappingFragment StoreEntitySet="CompanyBranch">
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+                <ScalarProperty Name="CompanyBranchName" ColumnName="CompanyBranchName" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="CompanyBranchId" ColumnName="CompanyBranchId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyTypes">
+            <EntityTypeMapping TypeName="Payroll_Model.CompanyType">
+              <MappingFragment StoreEntitySet="CompanyType">
+                <ScalarProperty Name="CompanyTypeName" ColumnName="CompanyTypeName" />
+                <ScalarProperty Name="CompanyTypeId" ColumnName="CompanyTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Payroll_Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="Payroll_Model.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="CCountry" ColumnName="CCountry" />
+                <ScalarProperty Name="CState" ColumnName="CState" />
+                <ScalarProperty Name="CDistrict" ColumnName="CDistrict" />
+                <ScalarProperty Name="CPin" ColumnName="CPin" />
+                <ScalarProperty Name="CAddress3" ColumnName="CAddress3" />
+                <ScalarProperty Name="CAddress2" ColumnName="CAddress2" />
+                <ScalarProperty Name="CAddress1" ColumnName="CAddress1" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="Address3" ColumnName="Address3" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="ContactId" ColumnName="ContactId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayGroups">
+            <EntityTypeMapping TypeName="Payroll_Model.PayGroup">
+              <MappingFragment StoreEntitySet="PayGroup">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="NoOfScales" ColumnName="NoOfScales" />
+                <ScalarProperty Name="PayGroupName" ColumnName="PayGroupName" />
+                <ScalarProperty Name="PayGroupNo" ColumnName="PayGroupNo" />
+                <ScalarProperty Name="PayRevisionId" ColumnName="PayRevisionId" />
+                <ScalarProperty Name="PayGroupId" ColumnName="PayGroupId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayRevisions">
+            <EntityTypeMapping TypeName="Payroll_Model.PayRevision">
+              <MappingFragment StoreEntitySet="PayRevision">
+                <ScalarProperty Name="CancelledDate" ColumnName="CancelledDate" />
+                <ScalarProperty Name="AplicableFrom" ColumnName="AplicableFrom" />
+                <ScalarProperty Name="SanctionDate" ColumnName="SanctionDate" />
+                <ScalarProperty Name="RevisionDate" ColumnName="RevisionDate" />
+                <ScalarProperty Name="RevisionYear" ColumnName="RevisionYear" />
+                <ScalarProperty Name="PayRevisionName" ColumnName="PayRevisionName" />
+                <ScalarProperty Name="PayRevisionId" ColumnName="PayRevisionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayScales">
+            <EntityTypeMapping TypeName="Payroll_Model.PayScale">
+              <MappingFragment StoreEntitySet="PayScale">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="IncrementPeriod" ColumnName="IncrementPeriod" />
+                <ScalarProperty Name="PayScaleMax" ColumnName="PayScaleMax" />
+                <ScalarProperty Name="PayScaleMin" ColumnName="PayScaleMin" />
+                <ScalarProperty Name="PayScaleDefinition" ColumnName="PayScaleDefinition" />
+                <ScalarProperty Name="PayScaleName" ColumnName="PayScaleName" />
+                <ScalarProperty Name="PayGroupId" ColumnName="PayGroupId" />
+                <ScalarProperty Name="PayRevisionId" ColumnName="PayRevisionId" />
+                <ScalarProperty Name="PayScaleId" ColumnName="PayScaleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PayStages">
+            <EntityTypeMapping TypeName="Payroll_Model.PayStage">
+              <MappingFragment StoreEntitySet="PayStage">
+                <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+                <ScalarProperty Name="StageIncrement" ColumnName="StageIncrement" />
+                <ScalarProperty Name="StagePay" ColumnName="StagePay" />
+                <ScalarProperty Name="StageName" ColumnName="StageName" />
+                <ScalarProperty Name="StageNo" ColumnName="StageNo" />
+                <ScalarProperty Name="PayScaleId" ColumnName="PayScaleId" />
+                <ScalarProperty Name="PayGroupId" ColumnName="PayGroupId" />
+                <ScalarProperty Name="PayRevisionId" ColumnName="PayRevisionId" />
+                <ScalarProperty Name="PayStageId" ColumnName="PayStageId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="PayrollDataModel" ZoomLevel="80">
+        <EntityTypeShape EntityType="Payroll_Model.Caste" Width="1.5" PointX="0.75" PointY="4.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Country" Width="1.5" PointX="10.75" PointY="2.625" Height="1.7879850260416657" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Department" Width="1.5" PointX="8.25" PointY="4.625" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.DepartmentType" Width="1.5" PointX="6" PointY="2" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Designation" Width="1.5" PointX="13" PointY="8.875" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.DesignationType" Width="1.5" PointX="10.75" PointY="9.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.District" Width="1.5" PointX="15.25" PointY="4" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Employee" Width="1.5" PointX="3" PointY="6.25" Height="7.1724251302083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.EmployeeType" Width="1.5" PointX="0.75" PointY="13.5" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.EmpNominee" Width="1.5" PointX="5.25" PointY="12.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Grade" Width="1.5" PointX="7.75" PointY="11.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Institution" Width="1.5" PointX="3.75" PointY="16.75" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.InstitutionBranch" Width="1.5" PointX="6" PointY="8.625" Height="2.3648893229166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.InstitutionType" Width="1.5" PointX="1.5" PointY="17" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.PromotionType" Width="1.5" PointX="9.75" PointY="11.75" Height="1.4033821614583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Religion" Width="1.5" PointX="1.5" PointY="1.625" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.State" Width="1.5" PointX="13" PointY="5.5" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="Payroll_Model.Status" Width="1.5" PointX="11.75" PointY="11.75" Height="1.5956835937500067" IsExpanded="true" />
+        <AssociationConnector Association="Payroll_Model.FK_Caste_Religion" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.875" PointY="3.6052864583333388" />
+          <ConnectorPoint PointX="1.875" PointY="4.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_Caste" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.5663858032226559" />
+          <ConnectorPoint PointX="2.4010397916666668" PointY="6.5663858032226541" />
+          <ConnectorPoint PointX="2.825522395833334" PointY="6.5663858032226559" />
+          <ConnectorPoint PointX="3" PointY="6.5663858032226559" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_Caste1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.3456929016113275" />
+          <ConnectorPoint PointX="2.4010397916666668" PointY="6.3456929016113257" />
+          <ConnectorPoint PointX="2.825522395833334" PointY="6.3456929016113275" />
+          <ConnectorPoint PointX="3" PointY="6.3456929016113275" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_District_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="4.2064925130208328" />
+          <ConnectorPoint PointX="15.25" PointY="4.2064925130208328" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_State_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.5" PointY="4.4129850260416656" />
+          <ConnectorPoint PointX="11.5" PointY="6.4901432291666694" />
+          <ConnectorPoint PointX="13" PointY="6.4901432291666694" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Department_DepartmentType" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="3.5956835937499996" />
+          <ConnectorPoint PointX="6.75" PointY="5.99974609375" />
+          <ConnectorPoint PointX="8.25" PointY="5.99974609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Designation_DesignationType" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.25" PointY="9.922841796875" />
+          <ConnectorPoint PointX="13" PointY="9.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_District_State" ManuallyRouted="false">
+          <ConnectorPoint PointX="14.5" PointY="5.8362939453125" />
+          <ConnectorPoint PointX="15.25" PointY="5.8362939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_EmployeeType" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="14.297841796875" />
+          <ConnectorPoint PointX="2.4791666666666665" PointY="14.297841796875" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="14.297841796875" />
+          <ConnectorPoint PointX="3.75" PointY="14.297841796875" />
+          <ConnectorPoint PointX="3.75" PointY="13.422425130208332" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_Religion" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.4843731250000003" PointY="3.6052864583333388" />
+          <ConnectorPoint PointX="2.4843731250000003" PointY="13.021017252604164" />
+          <ConnectorPoint PointX="2.5416666666666665" PointY="13.021017252604164" />
+          <ConnectorPoint PointX="2.7083333333333335" PointY="13.021017252604164" />
+          <ConnectorPoint PointX="3" PointY="13.021017252604164" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_Religion1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.7421890625" PointY="3.6052864583333388" />
+          <ConnectorPoint PointX="2.7421890625" PointY="7.0862939453125" />
+          <ConnectorPoint PointX="3" PointY="7.0862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_EmpNominee_Employee" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="13.086212565104166" />
+          <ConnectorPoint PointX="5.25" PointY="13.086212565104166" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Institution_InstitutionType" ManuallyRouted="false">
+          <ConnectorPoint PointX="3" PointY="17.797841796875" />
+          <ConnectorPoint PointX="3.75" PointY="17.797841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_InstitutionBranch_Institution" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="18.665385742187496" />
+          <ConnectorPoint PointX="7.40625" PointY="18.665385742187496" />
+          <ConnectorPoint PointX="7.40625" PointY="10.989889322916667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Payroll_Model.Company" Width="1.5" PointX="8.125" PointY="15.125" Height="2.7494921874999942" />
+        <EntityTypeShape EntityType="Payroll_Model.CompanyBranch" Width="1.5" PointX="10.25" PointY="15.5" Height="2.3648893229166674" />
+        <EntityTypeShape EntityType="Payroll_Model.CompanyType" Width="1.5" PointX="5.75" PointY="16.75" Height="1.595683593749996" />
+        <EntityTypeShape EntityType="Payroll_Model.sysdiagram" Width="1.5" PointX="13.375" PointY="0.75" Height="1.9802864583333246" />
+        <AssociationConnector Association="Payroll_Model.FK_Department_Company" >
+          <ConnectorPoint PointX="9.34375" PointY="15.125" />
+          <ConnectorPoint PointX="9.34375" PointY="7.3744921875" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Organisation_OrganisationType1" >
+          <ConnectorPoint PointX="7.25" PointY="17.31224609375" />
+          <ConnectorPoint PointX="7.322916666666667" PointY="17.31224609375" />
+          <ConnectorPoint PointX="7.489583333333333" PointY="17.31224609375" />
+          <ConnectorPoint PointX="7.791666666666667" PointY="17.31224609375" />
+          <ConnectorPoint PointX="7.958333333333333" PointY="17.31224609375" />
+          <ConnectorPoint PointX="8.125" PointY="17.31224609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_OrganisationBranch_Organisation1" >
+          <ConnectorPoint PointX="9.625" PointY="17.086513439127607" />
+          <ConnectorPoint PointX="10.25" PointY="17.086513439127607" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Department_CompanyBranch" >
+          <ConnectorPoint PointX="10.25" PointY="16.262004719563809" />
+          <ConnectorPoint PointX="9.875" PointY="16.262004719563809" />
+          <ConnectorPoint PointX="9.875" PointY="13.787985026041667" />
+          <ConnectorPoint PointX="9.5" PointY="13.787985026041667" />
+          <ConnectorPoint PointX="9.5" PointY="7.7494921875" />
+          <ConnectorPoint PointX="9.4270833333333339" PointY="7.7494921874999987" />
+          <ConnectorPoint PointX="9.2604166666666661" PointY="7.7494921875" />
+          <ConnectorPoint PointX="8.765623" PointY="7.7494921875" />
+          <ConnectorPoint PointX="8.765623" PointY="7.3744921875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Payroll_Model.Contact" Width="1.5" PointX="0.75" PointY="7.5" Height="5.057109374999996" />
+        <AssociationConnector Association="Payroll_Model.FK_Organisation_Contact" >
+          <ConnectorPoint PointX="2.2499999999999996" PointY="12.557109374999996" />
+          <ConnectorPoint PointX="2.4254475599011216" PointY="12.732556934901117" />
+          <ConnectorPoint PointX="2.5432986900988794" PointY="12.850408065098876" />
+          <ConnectorPoint PointX="2.625" PointY="12.932109374999996" />
+          <ConnectorPoint PointX="2.625" PointY="15.906250499999999" />
+          <ConnectorPoint PointX="7.322916666666667" PointY="15.906250499999999" />
+          <ConnectorPoint PointX="7.489583333333333" PointY="15.906250499999999" />
+          <ConnectorPoint PointX="8.125" PointY="15.906250499999999" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_OrganisationBranch_Contact" >
+          <ConnectorPoint PointX="1.4687479999999997" PointY="12.557109374999996" />
+          <ConnectorPoint PointX="1.4687479999999997" PointY="13.25" />
+          <ConnectorPoint PointX="2.5625" PointY="13.25" />
+          <ConnectorPoint PointX="2.5625" PointY="16.5" />
+          <ConnectorPoint PointX="7.322916666666667" PointY="16.5" />
+          <ConnectorPoint PointX="7.489583333333333" PointY="16.5" />
+          <ConnectorPoint PointX="7.875" PointY="16.5" />
+          <ConnectorPoint PointX="7.875" PointY="18.124492187500003" />
+          <ConnectorPoint PointX="9.875" PointY="18.124492187500003" />
+          <ConnectorPoint PointX="9.875" PointY="17.506953381022129" />
+          <ConnectorPoint PointX="10.25" PointY="17.506953381022129" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_Employee_Contact" >
+          <ConnectorPoint PointX="2.25" PointY="9.9973021875000043" />
+          <ConnectorPoint PointX="2.4010397916666668" PointY="9.9973021875000043" />
+          <ConnectorPoint PointX="2.5677064583333338" PointY="9.9973021875000043" />
+          <ConnectorPoint PointX="3" PointY="9.9973021875000043" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_InstitutionBranch_Contact" >
+          <ConnectorPoint PointX="1.5" PointY="7.5" />
+          <ConnectorPoint PointX="1.5" PointY="7.25" />
+          <ConnectorPoint PointX="2.4010397916666668" PointY="7.2499999999999991" />
+          <ConnectorPoint PointX="2.5677064583333338" PointY="7.25" />
+          <ConnectorPoint PointX="2.625" PointY="7.25" />
+          <ConnectorPoint PointX="2.625" PointY="6" />
+          <ConnectorPoint PointX="2.6588557291666666" PointY="5.9999999999999991" />
+          <ConnectorPoint PointX="2.8255223958333335" PointY="6" />
+          <ConnectorPoint PointX="5.625" PointY="6" />
+          <ConnectorPoint PointX="5.625" PointY="9.8074446614583337" />
+          <ConnectorPoint PointX="6" PointY="9.8074446614583337" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="Payroll_Model.PayGroup" Width="1.5" PointX="16.625" PointY="12.25" Height="2.7494921875000102" />
+        <EntityTypeShape EntityType="Payroll_Model.PayRevision" Width="1.5" PointX="14.375" PointY="12.125" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="Payroll_Model.PayScale" Width="1.5" PointX="18.875" PointY="12" Height="3.3263964843750102" />
+        <EntityTypeShape EntityType="Payroll_Model.PayStage" Width="1.5" PointX="21.125" PointY="12" Height="3.3263964843750102" />
+        <AssociationConnector Association="Payroll_Model.FK_PayGroup_PayRevision" >
+          <ConnectorPoint PointX="15.875" PointY="13.624746093750005" />
+          <ConnectorPoint PointX="16.625" PointY="13.624746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_PayScale_PayGroup" >
+          <ConnectorPoint PointX="18.125" PointY="13.624746093750005" />
+          <ConnectorPoint PointX="18.875" PointY="13.624746093750005" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_PayStage_PayGroup" >
+          <ConnectorPoint PointX="18.125" PointY="14.99949218750001" />
+          <ConnectorPoint PointX="18.5" PointY="15.37449218750001" />
+          <ConnectorPoint PointX="18.5" PointY="15.70139648437501" />
+          <ConnectorPoint PointX="20.75" PointY="15.70139648437501" />
+          <ConnectorPoint PointX="21.125" PointY="15.32639648437501" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_PayScale_PayRevision" >
+          <ConnectorPoint PointX="15.875" PointY="12.15625" />
+          <ConnectorPoint PointX="18.875" PointY="12.15625" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_PayStage_PayRevision" >
+          <ConnectorPoint PointX="15.875" PointY="12.125" />
+          <ConnectorPoint PointX="16.25" PointY="11.75" />
+          <ConnectorPoint PointX="16.25" PointY="11.625" />
+          <ConnectorPoint PointX="20.75" PointY="11.625" />
+          <ConnectorPoint PointX="21.125" PointY="12" />
+        </AssociationConnector>
+        <AssociationConnector Association="Payroll_Model.FK_PayStage_PayScale" >
+          <ConnectorPoint PointX="20.375" PointY="13.663198242187505" />
+          <ConnectorPoint PointX="21.125" PointY="13.663198242187505" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll", "Payroll\Payroll.csproj", "{75853344-98FE-48F8-94A6-099E3CAD5D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PayrollModel", "PayrollModel\PayrollModel.csproj", "{53D1E26E-3407-4F11-9E89-D3B09D7ECD67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll_Manager", "Payroll_Manager\Payroll_Manager.csproj", "{C4AD8AD7-18D4-4B51-92EA-F5053390BDE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75853344-98FE-48F8-94A6-099E3CAD5D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75853344-98FE-48F8-94A6-099E3CAD5D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75853344-98FE-48F8-94A6-099E3CAD5D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75853344-98FE-48F8-94A6-099E3CAD5D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53D1E26E-3407-4F11-9E89-D3B09D7ECD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D1E26E-3407-4F11-9E89-D3B09D7ECD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D1E26E-3407-4F11-9E89-D3B09D7ECD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D1E26E-3407-4F11-9E89-D3B09D7ECD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AD8AD7-18D4-4B51-92EA-F5053390BDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AD8AD7-18D4-4B51-92EA-F5053390BDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AD8AD7-18D4-4B51-92EA-F5053390BDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AD8AD7-18D4-4B51-92EA-F5053390BDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
