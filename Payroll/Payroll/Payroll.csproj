@@ -56,6 +56,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="App_Data\ASPNETDB.MDF" />
     <Content Include="Company\Department.aspx" />
     <Content Include="Company\DepartmentType.aspx" />
     <Content Include="Company\Designation.aspx" />
@@ -243,9 +244,7 @@
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
